@@ -49,18 +49,20 @@ function onButtonClicked(){
   button.style.left = nextPosition.x.toString() + "px";
   button.style.top = nextPosition.y.toString() + "px";
 
-  if(Math.random()*100 < 15){
-    playSound();
-    document.body.style.background = "black";
+  if(true){//Math.random()*100 < 50){
+    setTimeout(() => { playSound(); },0);
     button.disabled = true;
     button.hidden = true;
-    setTimeout(() => {document.getElementById("endText").hidden = false; },  1500);
+    document.body.style.background = "black";
+    setTimeout(() => {
+      document.getElementById("endText").hidden = false;
+    }, 1500);
   }
 }
 
 function playSound(){
   let sound = new Audio('soundbite.mp3');
-  sound.volume = 0.3;
+  sound.volume = 0.35;
   sound.play();
   console.log("XD");
 }
