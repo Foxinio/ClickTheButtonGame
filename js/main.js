@@ -49,7 +49,7 @@ function onButtonClicked(){
   button.style.left = nextPosition.x.toString() + "px";
   button.style.top = nextPosition.y.toString() + "px";
 
-  if(true){//Math.random()*100 < 50){
+  if(Math.random()*100 < 10){
     setTimeout(() => { playSound(); },0);
     button.disabled = true;
     button.hidden = true;
